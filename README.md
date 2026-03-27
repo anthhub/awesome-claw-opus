@@ -34,6 +34,8 @@
 
 ## Security
 
+> OpenClaw's rapid adoption has brought significant security challenges. This section covers known vulnerabilities, tools, and practices to secure your deployment.
+
 ### Known Vulnerabilities & CVEs
 
 - [CVE-2026-25253 (CVSS 8.8) — RCE One-Click Exploit](https://www.proarch.com/blog/threats-vulnerabilities/openclaw-rce-vulnerability-cve-2026-25253) — Remote code execution vulnerability, patched in v2026.1.29.
@@ -165,6 +167,8 @@
 - [One Month Review](https://mysummit.school/blog/en/openclaw-month-later/) — Honest one-month post-deployment review of enterprise OpenClaw usage.
 - [Presidio: NVIDIA Ecosystem](https://www.presidio.com/blogs/openclaw-enterprise-deployment-the-html-of-the-agentic-era-and-nvidia-just-built-the-browser/) — Enterprise deployment in the NVIDIA ecosystem with Presidio's perspective.
 - [Implementation Guide](https://insights.theinteractive.studio/openclaw-for-business-what-it-is-real-use-cases-and-how-to-implement-it) — Practical implementation guide for business teams adopting OpenClaw.
+- [DataStudios: Enterprise Case Studies](https://www.datastudios.org/post/claude-in-the-enterprise-case-studies-of-ai-deployments-and-real-world-results-1) — Real-world deployments at TELUS (57,000 employees), Zapier (10× growth), and Tines (100× acceleration).
+- [Faros AI: Claude Code ROI](https://www.faros.ai/blog/how-to-measure-claude-code-roi-developer-productivity-insights-with-faros-ai) — Measured 4:1 ROI with $37.50 per incremental PR vs $150 saved developer time.
 
 ### Multi-Tenant Solutions
 
@@ -183,6 +187,8 @@
 - [openclaw-observability-plugin](https://github.com/henrikrexed/openclaw-observability-plugin) — Open-source observability plugin for OpenClaw.
 - [ClawMetry](https://www.producthunt.com/products/clawmetry) — Real-time metrics dashboard for OpenClaw instances.
 - [BytePlus: Trace Monitoring](https://docs.byteplus.com/en/docs/Observability_Platform/OpenClaw_trace_monitoring) — Distributed trace monitoring for OpenClaw via BytePlus Observability Platform.
+- [Grafana Claude Stats Plugin](https://grafana.com/grafana/plugins/timurdigital-claudestats-app/) — Official Grafana plugin for real-time OpenClaw statistics dashboard.
+- [Grafana Cloud Anthropic Integration](https://grafana.com/blog/how-to-monitor-claude-usage-and-costs-introducing-the-anthropic-integration-for-grafana-cloud/) — Monitor Claude usage and costs with Grafana Cloud.
 
 ### Compliance & Audit
 
@@ -207,7 +213,7 @@
 
 ## Ecosystem
 
-A brief overview of notable OpenClaw forks and related frameworks.
+> A brief overview of notable OpenClaw forks and related frameworks.
 
 | Project | Stars | Language | Highlight |
 |---|---|---|---|
@@ -216,7 +222,7 @@ A brief overview of notable OpenClaw forks and related frameworks.
 | [ZeroClaw](https://github.com/zeroclaw-labs/zeroclaw) | 28K | Rust | 3 MB single binary |
 | [PicoClaw](https://github.com/sipeed/picoclaw) | 25K | Go | IoT and edge computing |
 | [NanoClaw](https://github.com/qwibitai/nanoclaw) | 10K | TypeScript | 500 lines |
-| [IronClaw](https://github.com/nearai/ironclaw) | — | Rust | WebAssembly sandbox security |
+| [IronClaw](https://github.com/nearai/ironclaw) | N/A (multiple forks) | Rust | WebAssembly sandbox security |
 | [MicroClaw](https://github.com/gtanjil/MicroClaw) | — | Rust (no_std) | Bare-metal / chip-level |
 | [ClawSwarm](https://github.com/The-Swarm-Corporation/ClawSwarm) | — | — | Native multi-agent orchestration |
 
