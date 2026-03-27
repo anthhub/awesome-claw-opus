@@ -31,7 +31,9 @@
   - [Enterprise Skills](#enterprise-skills)
   - [DevOps Skills](#devops-skills)
   - [Skill Security Practices](#skill-security-practices)
+  - [Multi-Agent Orchestration](#multi-agent-orchestration)
   - [Skill Development](#skill-development)
+- [Memory & RAG](#memory--rag)
 - [Ecosystem](#ecosystem)
 - [Contributing](#contributing)
 - [License](#license)
@@ -49,6 +51,9 @@
 - [OpenClawCVEs Tracker](https://github.com/jgamblin/OpenClawCVEs/) — Community-maintained CVE tracking repository.
 - [OpenClaw GitHub Security](https://github.com/openclaw/openclaw/security) — Official security advisories and disclosure page.
 - [Adversa AI: CVE Details + Moltbook Leak + Hardening](https://adversa.ai/blog/openclaw-security-101-vulnerabilities-hardening-2026/) — In-depth CVE analysis, Moltbook credential leak, and hardening recommendations.
+- [CVE-2026-24763](https://github.com/openclaw/openclaw/security) — Docker command injection vulnerability.
+- [CVE-2026-25593](https://github.com/openclaw/openclaw/security) — Unauthenticated local RCE via WebSocket.
+- [GHSA-g8p2-7wf7-98mq](https://github.com/openclaw/openclaw/security/advisories) — Token leakage enabling one-click RCE.
 
 ### Vulnerability Reports
 
@@ -70,6 +75,14 @@
 - [ClawDefend](https://www.clawdefend.com/) — Developer-focused security scanning for OpenClaw skills.
 - [VirusTotal Official Integration](https://thehackernews.com/2026/02/openclaw-integrates-virustotal-scanning.html) — Native VirusTotal scanning for ClawHub skills.
 - [claude-skill-security-auditor](https://github.com/wrsmith108/claude-skill-security-auditor) — Security auditor specifically targeting Claude Code skills.
+- [ClawSec](https://github.com/prompt-security/clawsec) — Complete security suite for OpenClaw deployments.
+- [ClawBands](https://github.com/SeyZ/clawbands) — Tool execution interceptor, filters skills before runtime.
+- [Aquaman](https://github.com/tech4242/aquaman) — Credential isolation proxy preventing credential leakage.
+- [Claw-Hunter](https://github.com/backslash-security/Claw-Hunter) — Enterprise endpoint detection for OpenClaw instances.
+- [Clawhatch](https://github.com/AISafetyLab/clawhatch) — Pre-install security scanner similar to ClawGuard.
+- [GuardSpine](https://github.com/DNYoussef/guardspine-openclaw) — Plugin-level security protection layer.
+- [ClawScan.io](https://clawscan.io) — Online skill scanning service.
+- [skill-audit](https://github.com/pors/skill-audit) — Community skill audit toolkit.
 
 ### Security Best Practices
 
@@ -102,6 +115,9 @@
 - [Composed Security: OpenClaw vs IronClaw](https://composedsecurity.medium.com/openclaw-is-viral-ironclaw-is-what-comes-after-you-read-the-security-reports-7c43bbf07b86) — Comparative security analysis between OpenClaw and IronClaw.
 - [Repello AI: Skill Security Audit Guide](https://repello.ai/blog/claude-code-skill-security) — Practical guide for auditing Claude Code skills.
 - [OX Security: Crypto-Wallet Phishing Attack](https://www.ox.security/blog/openclaw-github-phishing-crypto-wallet-attack/) — Disclosure of a GitHub-hosted phishing campaign targeting crypto wallets via OpenClaw.
+- [explain-openclaw](https://github.com/centminmod/explain-openclaw) — Multi-AI security analysis tool for vulnerability comparison.
+- [openclaw/trust](https://github.com/openclaw/trust) — Official community threat assessment model.
+- [MoltThreats](https://promptintel.novahunting.ai/molt) — Prompt threat intelligence tracking platform.
 
 ---
 
@@ -116,6 +132,10 @@
 - [Yotta Labs: Production Docker/K8s/GPU](https://www.yottalabs.ai/post/how-to-deploy-openclaw-in-production-docker-kubernetes-and-gpu-infrastructure) — Production deployment guide covering Docker, Kubernetes, and GPU infrastructure.
 - [Cloud Native Deep Dive: K8s](https://www.cloudnativedeepdive.com/running-openclaw-on-kubernetes/) — Deep dive into running OpenClaw on Kubernetes in a cloud-native setup.
 - [Simon Willison: Docker](https://til.simonwillison.net/llms/openclaw-docker) — Concise TIL-style guide for running OpenClaw via Docker.
+- [openclaw-ansible](https://github.com/openclaw/openclaw-ansible) — Official Ansible deployment scripts.
+- [openclaw-helm](https://github.com/serhanekicii/openclaw-helm) — Community Helm Chart for Kubernetes.
+- [1Panel Integration](https://github.com/1Panel-dev/1Panel) — Popular Chinese server panel with one-click deployment.
+- [Homebrew Tap](https://github.com/openclaw/homebrew-tap) — macOS Homebrew installation source.
 
 ### Cloud Platforms
 
@@ -129,6 +149,12 @@
 - [AWS](https://dev.to/brayanarrieta/how-to-set-up-openclaw-ai-on-aws-3a0j) — Community guide for setting up OpenClaw on AWS.
 - [Cloudflare/Vercel Comparison](https://apidog.com/blog/how-to-deploy-openclaw-on-cloudflare-vercel-or-simpleclaw/) — Comparison of Cloudflare, Vercel, and SimpleClaw deployment options.
 - [Cloud vs Local Comparison](https://help.apiyi.com/en/openclaw-cloud-vs-local-deployment-guide-en.html) — Decision guide comparing cloud hosting vs local self-hosting.
+- [Oracle Free Tier](https://www.oracle.com/cloud/free) — 4 ARM CPU + 24GB RAM permanently free, excellent for self-hosting.
+- [Zeabur Template](https://zeabur.com/templates/VTZ4FX) — One-click Docker deployment platform.
+- [Hetzner Guide](https://docs.openclaw.ai/platforms/hetzner) — Official Hetzner VPS deployment documentation.
+- [Coolify Template](https://github.com/essamamdani/openclaw-coolify) — Self-hosted PaaS deployment template.
+- [Raspberry Pi 5 Guide](https://ajfisher.me/2026/02/03/openclaw-raspberrypi-howto/) — Edge/home deployment on Raspberry Pi.
+- [Cloudflare MoltWorker](https://github.com/cloudflare/moltworker) — Official Cloudflare Workers integration.
 
 ### Reverse Proxy & Networking
 
@@ -138,6 +164,7 @@
 - [Multi-App Nginx Setup](https://dev.to/agent_paaru/openclaw-behind-nginx-on-a-shared-server-multi-app-reverse-proxy-setup-535) — Running OpenClaw behind Nginx alongside other applications on a shared server.
 - [Cloudflare Tunnel / Tailscale](https://blog.canadianwebhosting.com/openclaw-cloudflare-tunnel-tailscale-no-public-ports/) — Exposing OpenClaw without opening public ports using Cloudflare Tunnel or Tailscale.
 - [Secure Remote Access](https://open-claw.me/blog/openclaw-remote-access-safely) — Best practices for accessing a self-hosted OpenClaw instance remotely.
+- [ClawRouter](https://github.com/BlockRunAI/ClawRouter) — Smart model routing, saves up to 78% on costs.
 
 ### Performance Optimization
 
@@ -148,6 +175,9 @@
 - [Memory, Concurrency & Context](https://medium.com/@creativeaininja/how-to-optimize-openclaw-memory-concurrency-and-context-that-actually-works-84690c2de3d7) — Practical guide to optimizing memory, concurrency, and context handling.
 - [Multi-Agent Coordination](https://stormap.ai/post/multi-agent-workflows-coordinating-multiple-openclaw-instances) — Patterns for coordinating multiple OpenClaw instances in multi-agent workflows.
 - [4 Weeks in Production](https://www.sitepoint.com/openclaw-production-lessons-4-weeks-self-hosted-ai/) — Real-world lessons from running OpenClaw in production for four weeks.
+- [Cost Calculator](https://calculator.vlvt.sh) — Real-time cost estimation tool.
+- [Cost Governor](https://github.com/AtlasPA/openclaw-cost-governor) — Budget enforcement tool for OpenClaw usage.
+- [clawdbot-cost-monitor](https://github.com/bokonon23/clawdbot-cost-monitor) — Open-source cost monitoring dashboard.
 
 ### Backup & Recovery
 
@@ -195,6 +225,10 @@
 - [BytePlus: Trace Monitoring](https://docs.byteplus.com/en/docs/Observability_Platform/OpenClaw_trace_monitoring) — Distributed trace monitoring for OpenClaw via BytePlus Observability Platform.
 - [Grafana Claude Stats Plugin](https://grafana.com/grafana/plugins/timurdigital-claudestats-app/) — Official Grafana plugin for real-time OpenClaw statistics dashboard.
 - [Grafana Cloud Anthropic Integration](https://grafana.com/blog/how-to-monitor-claude-usage-and-costs-introducing-the-anthropic-integration-for-grafana-cloud/) — Monitor Claude usage and costs with Grafana Cloud.
+- [Mission Control](https://github.com/abhi1693/openclaw-mission-control) — War-room style monitoring with RBAC.
+- [Hawk Eye](https://github.com/benfoxsb/hawk-eye) — Workspace sentinel for anomaly behavior detection.
+- [OpenClaw Studio](https://github.com/grp06/openclaw-studio) — Visual agent management tool.
+- [ClawController](https://www.clawcontroller.com) — Real-time monitoring dashboard.
 
 ### Compliance & Audit
 
@@ -226,6 +260,9 @@
 - [clawscan](https://github.com/openclaw/skills/blob/main/skills/g0head/clawscan/SKILL.md) — Official ClawHub static scanner skill for pre-install security checks.
 - [openclaw-security-monitor](https://github.com/adibirzu/openclaw-security-monitor) — Active monitoring for ClawHavoc, AMOS Stealer, CVE-2026-25253, and supply chain attacks.
 - [OWASP Agentic Skills Top 10](https://owasp.org/www-project-agentic-skills-top-10/checklist.html) — Official OWASP checklist for agent skill security.
+- [arc-security-audit](https://github.com/openclaw/skills) — Full agent skill stack security audit.
+- [clawdefender](https://github.com/openclaw/skills) — Security scanner + input sanitizer skill.
+- [agentkeys](https://github.com/openclaw/skills) — Secure credential broker for AI agents.
 
 ### Enterprise Skills
 
@@ -250,6 +287,12 @@
 - [Snyk ToxicSkills Report](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/) — Audit of 22,511 skills: 36% with defects, 1,467 malicious payloads, 127 invisible Unicode steganography.
 - [VirusTotal Integration](https://thehackernews.com/2026/02/openclaw-integrates-virustotal-scanning.html) — All ClawHub uploads now scanned via VirusTotal Code Insight.
 
+### Multi-Agent Orchestration
+
+- [agent-team-orchestration](https://github.com/openclaw/skills) — Role definitions, task lifecycle, and handoff protocols.
+- [agent-collaboration-network](https://github.com/openclaw/skills) — Agent registry, skill-based discovery, message routing.
+- [arc-department-manager](https://github.com/openclaw/skills) — Manage AI sub-agent departments.
+
 ### Skill Development
 
 - [Official Skills Guide](https://docs.openclaw.ai/tools/creating-skills) — Creating custom skills with SKILL.md.
@@ -257,6 +300,23 @@
 - [DataCamp Tutorial](https://www.datacamp.com/tutorial/building-open-claw-skills) — Hands-on custom skill building guide.
 - [DigitalOcean Guide](https://www.digitalocean.com/resources/articles/what-are-openclaw-skills) — Comprehensive skill overview and development walkthrough.
 - [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) — 5,400+ curated skills from the official registry.
+
+---
+
+## Memory & RAG
+
+- [Mem0 Integration](https://docs.mem0.ai/integrations/openclaw) — Most popular persistent memory solution for OpenClaw agents.
+- [MemOS](https://github.com/MemTensor/MemOS) — Memory operating system for AI agents.
+- [MemOS Cloud Plugin](https://github.com/MemTensor/MemOS-Cloud-OpenClaw-Plugin) — Cloud-based memory plugin for OpenClaw.
+- [memov](https://github.com/memovai/memov) — Universal memory layer and retrieval toolkit.
+- [OceanBase PowerMem](https://github.com/oceanbase/powermem) — Powerful memory backend by Alibaba OceanBase.
+- [Supermemory](https://github.com/supermemoryai/openclaw-supermemory) — Supermemory integration for OpenClaw.
+- [openamnesia](https://github.com/vincentkoc/openamnesia) — Continuous learning context engine with privacy-safe memory extraction.
+- [MoltBrain](https://github.com/nhevers/MoltBrain) — Brain-like long-term memory system.
+- [Cognee](https://github.com/topoteretes/cognee-integrations) — Graph-based memory and recall system.
+- [Engram](https://github.com/RyanLisse/engram) — Unified multi-agent memory framework.
+- [openclaw-memory-mem0](https://github.com/serenichron/openclaw-memory-mem0) — Semantic fact extraction memory layer.
+- [claude-mem](https://github.com/thedotmack/claude-mem/) — Claude-specific memory layer.
 
 ---
 
@@ -274,6 +334,10 @@
 | [IronClaw](https://github.com/nearai/ironclaw) | N/A (multiple forks) | Rust | WebAssembly sandbox security |
 | [MicroClaw](https://github.com/gtanjil/MicroClaw) | — | Rust (no_std) | Bare-metal / chip-level |
 | [ClawSwarm](https://github.com/The-Swarm-Corporation/ClawSwarm) | — | — | Native multi-agent orchestration |
+| [ZeptoClaw](https://github.com/qhkm/zeptoclaw) | — | Rust | 7-layer security, ultimate integration |
+| [MimiClaw](https://github.com/memovai/mimiclaw) | 1.9K | C | Runs on $5 ESP32-S3 chips |
+| [TinyClaw](https://github.com/jlia0/tinyclaw) | 1.8K | Shell | Multi-agent team collaboration |
+| [OpenFang](https://github.com/RightNow-AI/openfang) | — | Rust | Agent OS, 137K LOC |
 
 ---
 
