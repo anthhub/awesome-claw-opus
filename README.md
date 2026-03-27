@@ -26,6 +26,12 @@
   - [Monitoring & Observability](#monitoring--observability)
   - [Compliance & Audit](#compliance--audit)
   - [Enterprise Tool Integrations](#enterprise-tool-integrations)
+- [Skills & Plugins](#skills--plugins)
+  - [Security Skills](#security-skills)
+  - [Enterprise Skills](#enterprise-skills)
+  - [DevOps Skills](#devops-skills)
+  - [Skill Security Practices](#skill-security-practices)
+  - [Skill Development](#skill-development)
 - [Ecosystem](#ecosystem)
 - [Contributing](#contributing)
 - [License](#license)
@@ -208,6 +214,49 @@
 - [Jira Integration Guide](https://www.getopenclaw.ai/en/integrations/jira) — Step-by-step guide for connecting OpenClaw to Jira.
 - [Expanso: Jira Automation](https://expanso.io/expanso-hearts-openclaw/jira/) — Expanso's guide for automating Jira workflows with OpenClaw.
 - [ServiceNow Agent Skill](https://openclawskills.best/skills/thesethrose/servicenow-agent/) — Community-built ServiceNow agent skill for ClawHub.
+
+---
+
+## Skills & Plugins
+
+### Security Skills
+
+- [SecureClaw (Adversa AI)](https://github.com/adversa-ai/secureclaw) — First OWASP ASI Top 10 aligned security plugin with MITRE ATLAS mapping, dual-layer defense (code + behavior).
+- [ClawSecure](https://www.clawsecure.ai/) — 3-layer audit protocol detecting 55+ OpenClaw-specific threat patterns; audited 2,890+ agents.
+- [clawscan](https://github.com/openclaw/skills/blob/main/skills/g0head/clawscan/SKILL.md) — Official ClawHub static scanner skill for pre-install security checks.
+- [openclaw-security-monitor](https://github.com/adibirzu/openclaw-security-monitor) — Active monitoring for ClawHavoc, AMOS Stealer, CVE-2026-25253, and supply chain attacks.
+- [OWASP Agentic Skills Top 10](https://owasp.org/www-project-agentic-skills-top-10/checklist.html) — Official OWASP checklist for agent skill security.
+
+### Enterprise Skills
+
+- [Salesforce MCP](https://composio.dev/toolkits/salesforce/framework/openclaw) — Natural language CRM automation via Composio.
+- [Jira Integration](https://expanso.io/expanso-hearts-openclaw/jira/) — Issue creation, sprint tracking, JQL queries, workflow automation.
+- [sql-toolkit](https://github.com/openclaw/skills/blob/main/skills/gitgoodordietrying/sql-toolkit/SKILL.md) — PostgreSQL/MySQL/SQLite with NL-to-SQL, parameterized queries, read-only mode, audit logging.
+- [database](https://github.com/openclaw/skills/blob/main/skills/0xterrybit/database/SKILL.md) — Unified PostgreSQL/MySQL/SQLite/MongoDB/Redis access with SSH tunnel and destructive operation confirmation.
+- [GOG (Google Workspace)](https://clawhub.ai/) — Gmail + Calendar + Drive + Sheets integration, 14,000+ installs.
+
+### DevOps Skills
+
+- [openclaw-operator](https://github.com/openclaw-rocks/k8s-operator) — Production Kubernetes operator with network isolation, secret management, and health monitoring.
+- [openclaw-dashboard](https://github.com/tugcantopaloglu/openclaw-dashboard) — Secure real-time monitoring panel with Auth, TOTP MFA, cost tracking, and memory browser.
+- [GitHub Actions CI/CD Monitoring](https://ubos.tech/extending-the-openclaw-devops-agent-to-monitor-github-actions-ci-cd-pipelines/) — Detect build/test failures and auto-pull error logs.
+- [Lobster Shell](https://clawhub.ai/) — Native OpenClaw workflow shell composing skills and tools into reusable pipelines.
+
+### Skill Security Practices
+
+- [Semgrep Security Cheat Sheet](https://semgrep.dev/blog/2026/openclaw-security-engineers-cheat-sheet/) — Static analysis rules for skill security auditing.
+- [OpenClaw Security Best Practices](https://openclawroadmap.com/security-best-practices.php) — Pre-install audit steps and minimal sandbox permissions.
+- [Official Security Docs](https://docs.openclaw.ai/gateway/security) — Permission model, sandbox config, `--allow-tools` deny-by-default.
+- [Snyk ToxicSkills Report](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/) — Audit of 22,511 skills: 36% with defects, 1,467 malicious payloads, 127 invisible Unicode steganography.
+- [VirusTotal Integration](https://thehackernews.com/2026/02/openclaw-integrates-virustotal-scanning.html) — All ClawHub uploads now scanned via VirusTotal Code Insight.
+
+### Skill Development
+
+- [Official Skills Guide](https://docs.openclaw.ai/tools/creating-skills) — Creating custom skills with SKILL.md.
+- [Plugin SDK](https://docs.openclaw.ai/tools/plugin) — TypeScript SDK for channels, model providers, tools, and skills.
+- [DataCamp Tutorial](https://www.datacamp.com/tutorial/building-open-claw-skills) — Hands-on custom skill building guide.
+- [DigitalOcean Guide](https://www.digitalocean.com/resources/articles/what-are-openclaw-skills) — Comprehensive skill overview and development walkthrough.
+- [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) — 5,400+ curated skills from the official registry.
 
 ---
 
