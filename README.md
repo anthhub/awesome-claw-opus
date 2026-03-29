@@ -1,8 +1,26 @@
 # Awesome Claw Opus 🦞🔒
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--03--28-brightgreen)](https://github.com/anthhub/awesome-claw-opus)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/anthhub/awesome-claw-opus/pulls)
 
 > A curated list of OpenClaw security, self-hosting, and enterprise resources — covering CVEs, hardening guides, deployment patterns, and ecosystem forks.
+
+### Recently Added (2026-03-28)
+
+| Project | Category | Highlight |
+|---|---|---|
+| [NemoClaw](https://github.com/NVIDIA/NemoClaw) `NEW` | Security | NVIDIA's secure sandbox runtime for OpenClaw (17.6k stars) |
+| [shellward](https://github.com/jnMetaCode/shellward) `NEW` | Security | 8-layer defense middleware + DLP + prompt injection detection |
+| [memory-lancedb-pro](https://github.com/CortexReach/memory-lancedb-pro) `NEW` | Memory | Hybrid retrieval long-term memory — Vector+BM25+Cross-Encoder (3.7k stars) |
+| [lossless-claw](https://github.com/Martian-Engineering/lossless-claw) `NEW` | Memory | Lossless context management — DAG summarization, zero info loss (3.7k stars) |
+| [OpenViking](https://github.com/volcengine/OpenViking) `NEW` | Memory | ByteDance's context database for AI agents (19.8k stars) |
+| [memU](https://github.com/NevaMind-AI/memU) `NEW` | Memory | Memory system for 24/7 persistent agents (13.2k stars) |
+| [edict](https://github.com/cft0808/edict) `NEW` | Multi-Agent | 9-agent orchestration with real-time dashboard (13.4k stars) |
+| [openclaw-a2a-gateway](https://github.com/win4r/openclaw-a2a-gateway) `NEW` | Multi-Agent | A2A protocol v0.3.0 bidirectional agent communication gateway |
+| [AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw) `NEW` | Ecosystem | Fully autonomous research — idea to paper (9.4k stars) |
+
+---
 
 ## Contents
 
@@ -95,10 +113,12 @@
 
 ### Security-Enhanced Variants
 
+- [NemoClaw](https://github.com/NVIDIA/NemoClaw) — **NVIDIA's official secure runtime** for OpenClaw inside OpenShell sandbox with managed inference. Apache 2.0, 17.6K stars in two weeks. `NEW`
 - [IronClaw](https://github.com/nearai/ironclaw) — Rust-based fork with WebAssembly isolation, capability-based permissions, and credential injection/leak detection.
 - [IronClaw Review](https://awesomeagents.ai/reviews/review-ironclaw/) — In-depth review of IronClaw's security architecture and trade-offs.
 - [Cisco DefenseClaw](https://www.how2shout.com/news/cisco-defenseclaw-openclaw-security-clawhavoc-supply-chain-attack.html) — Cisco's hardened fork designed specifically to counter supply chain attacks.
 - [ZeroClaw](https://github.com/zeroclaw-labs/zeroclaw) — Rust-based fork with filesystem sandboxing, distributed as a 3 MB single binary.
+- [shellward](https://github.com/jnMetaCode/shellward) — AI Agent security middleware with 8-layer defense, DLP data flow control, and prompt injection detection. Zero dependencies, available as SDK + OpenClaw plugin. `NEW`
 
 ### Supply Chain Attacks (ClawHavoc)
 
@@ -289,6 +309,8 @@
 
 ### Multi-Agent Orchestration
 
+- [edict](https://github.com/cft0808/edict) — **9-agent orchestration system** inspired by ancient Chinese "Three Departments and Six Ministries" governance. Real-time dashboard, kanban view, full audit trails, multi-model support (13.4K stars). `NEW`
+- [openclaw-a2a-gateway](https://github.com/win4r/openclaw-a2a-gateway) — **A2A (Agent-to-Agent) protocol v0.3.0** implementation — bidirectional agent communication gateway for standardized multi-agent interoperability. `NEW`
 - [agent-team-orchestration](https://github.com/openclaw/skills) — Role definitions, task lifecycle, and handoff protocols.
 - [agent-collaboration-network](https://github.com/openclaw/skills) — Agent registry, skill-based discovery, message routing.
 - [arc-department-manager](https://github.com/openclaw/skills) — Manage AI sub-agent departments.
@@ -305,18 +327,41 @@
 
 ## Memory & RAG
 
+> Memory is one of the fastest-evolving areas in the OpenClaw ecosystem. Two complementary approaches have emerged: **long-term memory** (cross-session knowledge) and **context management** (within-session lossless handling).
+
+### Long-term Memory vs Context Management — How to Choose?
+
+| | Long-term Memory | Context Management |
+|---|---|---|
+| **Problem solved** | Remember user preferences & decisions across sessions | Prevent info loss when conversation exceeds context window |
+| **Scope** | Permanent (cross-session) | Within current session |
+| **Representative** | memory-lancedb-pro, Mem0, memU | lossless-claw, OpenViking |
+| **Plugin slot** | `memory` | `contextEngine` |
+| **Can use both?** | Yes — they complement each other | |
+
+**Best practice:** Enable one long-term memory plugin + one context management plugin together.
+
+### Long-term Memory
+
+- [memory-lancedb-pro](https://github.com/CortexReach/memory-lancedb-pro) — **Hybrid retrieval long-term memory** — Vector+BM25+Cross-Encoder reranking, auto-captures 6 knowledge categories, Weibull decay model for intelligent forgetting (3.7K stars). `NEW`
+- [memU](https://github.com/NevaMind-AI/memU) — **Built for 24/7 persistent agents** — supports Claude Skills + MCP protocol, designed for always-on agentic workflows (13.2K stars). `NEW`
 - [Mem0 Integration](https://docs.mem0.ai/integrations/openclaw) — Most popular persistent memory solution for OpenClaw agents.
-- [MemOS](https://github.com/MemTensor/MemOS) — Memory operating system for AI agents.
-- [MemOS Cloud Plugin](https://github.com/MemTensor/MemOS-Cloud-OpenClaw-Plugin) — Cloud-based memory plugin for OpenClaw.
-- [memov](https://github.com/memovai/memov) — Universal memory layer and retrieval toolkit.
 - [OceanBase PowerMem](https://github.com/oceanbase/powermem) — Powerful memory backend by Alibaba OceanBase.
 - [Supermemory](https://github.com/supermemoryai/openclaw-supermemory) — Supermemory integration for OpenClaw.
-- [openamnesia](https://github.com/vincentkoc/openamnesia) — Continuous learning context engine with privacy-safe memory extraction.
 - [MoltBrain](https://github.com/nhevers/MoltBrain) — Brain-like long-term memory system.
-- [Cognee](https://github.com/topoteretes/cognee-integrations) — Graph-based memory and recall system.
 - [Engram](https://github.com/RyanLisse/engram) — Unified multi-agent memory framework.
 - [openclaw-memory-mem0](https://github.com/serenichron/openclaw-memory-mem0) — Semantic fact extraction memory layer.
 - [claude-mem](https://github.com/thedotmack/claude-mem/) — Claude-specific memory layer.
+
+### Context Management
+
+- [lossless-claw](https://github.com/Martian-Engineering/lossless-claw) — **Lossless Context Management** — DAG-based hierarchical summarization + SQLite persistence, zero information loss. Agents can search (`lcm_grep`) and drill into (`lcm_expand`) any compacted history (3.7K stars). `NEW`
+- [OpenViking](https://github.com/volcengine/OpenViking) — **ByteDance's context database for AI agents** — file-system paradigm for unified management of memory, resources, and skills. Supports hierarchical context delivery and self-evolution (19.8K stars). `NEW`
+- [MemOS](https://github.com/MemTensor/MemOS) — Memory operating system for AI agents.
+- [MemOS Cloud Plugin](https://github.com/MemTensor/MemOS-Cloud-OpenClaw-Plugin) — Cloud-based memory plugin for OpenClaw.
+- [memov](https://github.com/memovai/memov) — Universal memory layer and retrieval toolkit.
+- [openamnesia](https://github.com/vincentkoc/openamnesia) — Continuous learning context engine with privacy-safe memory extraction.
+- [Cognee](https://github.com/topoteretes/cognee-integrations) — Graph-based memory and recall system.
 
 ---
 
@@ -326,13 +371,15 @@
 
 | Project | Stars | Language | Highlight |
 |---|---|---|---|
-| [OpenClaw](https://github.com/openclaw/openclaw) | 331K+ | — | The original |
-| [Nanobot](https://github.com/HKUDS/nanobot) | 34.6K | Python | Hong Kong University project |
-| [ZeroClaw](https://github.com/zeroclaw-labs/zeroclaw) | 28K | Rust | 3 MB single binary |
-| [PicoClaw](https://github.com/sipeed/picoclaw) | 25K | Go | IoT and edge computing |
-| [NanoClaw](https://github.com/qwibitai/nanoclaw) | 10K | TypeScript | 500 lines |
-| [IronClaw](https://github.com/nearai/ironclaw) | N/A (multiple forks) | Rust | WebAssembly sandbox security |
-| [MicroClaw](https://github.com/gtanjil/MicroClaw) | — | Rust (no_std) | Bare-metal / chip-level |
+| [OpenClaw](https://github.com/openclaw/openclaw) | 340K+ | — | The original |
+| [Nanobot](https://github.com/HKUDS/nanobot) | 36.9K | Python | Hong Kong University, ultra-lightweight |
+| [ZeroClaw](https://github.com/zeroclaw-labs/zeroclaw) | 29.1K | Rust | 3 MB single binary, <10ms startup |
+| [NanoClaw](https://github.com/qwibitai/nanoclaw) | 25.9K | TypeScript | Container-isolated, Anthropic Agent SDK |
+| [NemoClaw](https://github.com/NVIDIA/NemoClaw) | 17.6K | JavaScript | **NVIDIA** — secure sandbox + managed inference `NEW` |
+| [edict](https://github.com/cft0808/edict) | 13.4K | Python | 9-agent orchestration, real-time dashboard `NEW` |
+| [IronClaw](https://github.com/nearai/ironclaw) | 11.1K | Rust | WebAssembly sandbox security |
+| [moltworker](https://github.com/cloudflare/moltworker) | 9.8K | TypeScript | **Cloudflare** — Workers edge deployment |
+| [AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw) | 9.4K | Python | Idea-to-paper autonomous research `NEW` |
 | [ClawSwarm](https://github.com/The-Swarm-Corporation/ClawSwarm) | — | — | Native multi-agent orchestration |
 | [ZeptoClaw](https://github.com/qhkm/zeptoclaw) | — | Rust | 7-layer security, ultimate integration |
 | [MimiClaw](https://github.com/memovai/mimiclaw) | 1.9K | C | Runs on $5 ESP32-S3 chips |
