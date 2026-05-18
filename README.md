@@ -138,6 +138,7 @@
 - [explain-openclaw](https://github.com/centminmod/explain-openclaw) — Multi-AI security analysis tool for vulnerability comparison.
 - [openclaw/trust](https://github.com/openclaw/trust) — Official community threat assessment model.
 - [MoltThreats](https://promptintel.novahunting.ai/molt) — Prompt threat intelligence tracking platform.
+- [APort Agent Guardrails](https://aport.io) - Pre-action authorization guardrails for AI agents and MCP/tool-use workflows.
 
 ---
 
